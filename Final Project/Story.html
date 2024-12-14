@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Joe Bursch -->
+	<meta charset="utf-8">
+	<title>My Dog Lambo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The story of Lambo.">
+	<meta name="keywords" content="Lambo, dog, pet, story, adoption, hemangiosarcoma, companion, ">
+	<link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="images/favicon.ico">
+  <style>
+    main {
+      display: grid;
+      grid-template-columns: .3fr .3fr;
+      clear:both;
+      justify-content: center;
+    }
+
+    section {
+      grid-column: 1;
+      width: 90%;
+      background-color: #ffdcb6;
+      box-shadow: 0 0 0 10px #f2b79f, 0 0 0 12px black;
+      margin: 2.5rem auto;
+    }
+    
+    section p {
+      width: 90%;
+    }
+
+    .slideshow {
+      grid-column: 2; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin: 2.5rem auto;
+    }
+
+    #slideshow img {
+      margin: auto;
+      box-shadow: 0 0 0 10px #f2b79f, 0 0 0 12px black;
+      width: 100%;
+      min-width: 100px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 642px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        grid-column: 1;
+        width: 80%;
+        margin: 2.5rem auto;
+      }
+
+      .slideshow {
+        grid-column: 1;
+        width: 80%;
+        margin: 2.5rem auto;
+      }
+    }
+
+    @media screen and (max-width: 2600px) and (min-width: 1930px) {
+      main {
+        grid-template-columns: .3fr .3fr;
+      }
+
+      section {
+        grid-column: 1;
+        width: 85%;
+        margin: 2.5rem auto;
+      }
+
+      section p {
+        font-size: 1.5rem;
+      }
+
+      .slideshow {
+        grid-column: 2;
+        width: 85%;
+        margin: 2.5rem auto;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><img src="images/dogbone.png" alt="Yellow dog bone">My Dog Lambo<img src="images/dogbone.png" alt="Yellow dog bone"></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html" class="current">Lambo's Story</a></li>
+            <li><a href="favoriteToys.html">Favorite Toys</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main> 
+	 <section>
+    <h2>Lambo's Story</h2>
+		<p>
+      I adopted Lambo in April 2013 from a Pet Supermarket in Wilmington, NC, during an adoption event for shelter dogs at risk of euthanasia. 
+      About 8 dogs were lined up in cages, all appearing sad and lethargic. Amidst them, there was Lambo, standing out with his wild, fun, and 
+      energetic demeanor. Despite feeling empathy for all the dogs, I knew that Lambo was the perfect match for me.
+    </p>
+    <p>
+      Lambo was quite a handful, with incidents of going to the bathroom on the walls, a lack of commands, and overall chaotic behavior. Nevertheless, 
+      I cherished him deeply. Beneath his initial exuberance, Lambo revealed his sensitive, intuitive nature filled with love. With consistent training and the 
+      establishment of a routine, he transformed into the ideal dog.
+    </p>
+    <p>
+      Lambo enjoyed constant attention in a family deeply fond of animals. Between my family and my wife's family, our households were bustling with 
+      various creatures. We had four additional dogs, four cats, a bunny, and a turtle that Lambo found particularly intriguing.
+    </p>
+    <p>
+      Lambo was our little goop ball, always seeking cuddles, playtime, and perhaps a bit too much food. He was our most cherished companion, 
+      always there to lift our spirits on a rough day. The time we shared with him holds a special place in our hearts. 
+      Lambo found peace in November 2023 after succumbing to hemangiosarcoma. 
+    </p>
+	</section>
+  <div id = "slideshow" class="slideshow">
+  </div>
+  </main>
+
+  <footer>
+	&copy; 2023 Joe Bursch. All rights reserved.
+  </footer>
+  <script src="js/slideshow.js"></script>
+</body>
+</html>

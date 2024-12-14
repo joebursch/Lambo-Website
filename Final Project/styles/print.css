@@ -1,0 +1,22 @@
+main {
+    font-family: Georgia, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+footer {
+    display: none;
+}
+
+#nav {
+    display: none; 
+}
+
+#printButton {
+    display: none;
+}

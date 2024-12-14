@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Joe Bursch -->
+	<meta charset="utf-8">
+	<title>My Dog Lambo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A form for contributions to the research of hemangiosarcomas.">
+	<meta name="keywords" content="form, donation, donate, lambo, hemangiosarcoma research">
+	<link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="images/favicon.ico">
+  <style>
+    section form {
+      background-color: #ffdcb6;
+      padding: 1.25rem 1.5% 1.25rem 1.5%;
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 40%;
+      margin: 6.25rem auto;
+    }
+
+    form p {
+      text-align: center;
+      font-size: 1.3rem;
+      width: 80%;
+      margin: 1.25rem auto;
+      color: #444;
+      padding: 0;
+    }
+
+    section form label {
+      display: block;
+      float: left;
+      padding: 0.313rem 1.475% 0.313rem 1.475%;
+      margin-bottom: 0.25rem;
+      color: black;
+      font-weight: 600;
+    }
+
+    section form input {
+      width: 95%;
+      padding: 0.5rem 1.1% 0.5rem 1.1%;
+      margin-bottom: 1rem;
+      border: 1px solid #b47c53;
+      border-radius: 4px;
+    }
+
+    #button {
+      background-color: #b47c53;
+      color: black;
+      padding: 0.625rem 2% 0.625rem 2%;
+      border: 1px solid #b47c53;
+      cursor: pointer;
+      font-weight: bold;
+      width: 30%;
+      margin-bottom: 0;
+      margin-top: 0.313rem;
+      transition: 0.4s;
+      font-size: 1.25rem;
+    }
+
+    #button:hover {
+      background-color: #f2b79f;
+      transform: scale(1.2);
+    }
+
+    .options {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 0.625rem;
+    }
+
+    .options input {
+      display: none;
+    }
+
+    .options label {
+      flex: 0 0 10%;
+      display: inline-block;
+      background-color: white;
+      color: black;
+      text-align: center;
+      border: 1px solid #b47c53;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1em;
+    }
+
+    .options input:checked + label {
+      background-color: #f2b79f;
+    }
+    
+    @media (max-width: 642px) {
+
+      section form {
+        width: 90%;
+        margin-top: 10.5rem;
+      }
+
+      form p {
+        width: 80%;
+      }
+
+      section form label {
+        float: none; 
+        width: 80%; 
+        padding: 0.5rem 3.8% 0.5rem 3.8%;
+        text-align: left; 
+      }
+
+      section form input {
+        width: 90%;
+      }
+
+      #button {
+        width: 40%;
+        font-size: 1rem;
+      }
+
+      .options label {
+        width: 15%;
+        margin-bottom: 0.625rem;
+        padding: 0.5rem 1%;
+      }
+    }
+
+    @media screen and (max-width: 2600px) and (min-width: 1930px) {
+      section form {
+        width: 30%;
+        margin-top: 10.5rem;
+      }
+
+      form p {
+        width: 80%;
+      }
+
+      section form label {
+        float: none; 
+        width: 80%; 
+        padding: 0.5rem 3.8% 0.5rem 3.8%;
+        text-align: left; 
+      }
+
+      section form input {
+        width: 90%;
+      }
+
+      #button {
+        width: 20%;
+      }
+
+      .options label {
+        width: 10%;
+        margin-bottom: 0.625rem;
+        padding: 0.5rem 0.5% 0.5rem 0.5%;
+      }
+    }
+	</style>
+</head>
+<body>
+  <header>
+    <h1><img src="images/dogbone.png" alt="Yellow dog bone">My Dog Lambo<img src="images/dogbone.png" alt="Yellow dog bone"></h1>
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="story.html">Lambo's Story</a></li>
+            <li><a href="favoriteToys.html">Favorite Toys</a></li>
+            <li><a href="donate.html" class="current">Donate</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <section>
+      <form id="donationForm" action="thankyou.html" method="post">
+        <p>By donating to hemangiosarcoma research, we can gain a better understanding of this common canine cancer and potentially develop ways 
+          to prevent or cure it in the future.
+        </p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required autofocus>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+
+        <label for="amount">Donation:</label>
+        <input type="number" id="amount" name="amount" min="1" placeholder="Please enter the amount you wish to donate, or choose a pre-determined amount below.">
+        
+        <div class="options">
+          <input type="radio" id="amount5" name="amount" value="5">
+          <label for="amount5">$5</label>
+    
+          <input type="radio" id="amount10" name="amount" value="10">
+          <label for="amount10">$10</label>
+    
+          <input type="radio" id="amount25" name="amount" value="25">
+          <label for="amount25">$25</label>
+    
+          <input type="radio" id="amount50" name="amount" value="50">
+          <label for="amount50">$50</label>
+    
+          <input type="radio" id="amount100" name="amount" value="100">
+          <label for="amount100">$100</label>
+        </div>
+    
+        <input type="submit" value="Donate" id="button">
+      </form>
+  </section>
+  </main>
+
+  <footer>
+	&copy; 2023 Joe Bursch. All rights reserved.
+  </footer>
+  <script src="js/donationValidation"></script>
+</body>
+</html>
